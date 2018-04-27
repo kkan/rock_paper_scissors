@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Rock Paper Scissors Game</h1>
+
+  <form action="/throw" method="post">
+    <% @signs.each do |sign| %>
+      <p><input name="sign" type="radio" value="<%= sign %>"> <%= sign.capitalize %></p>
+    <% end %>
+    <input type="submit" value="Play!" class="btn-primary">
+  </form>
+
+  <% if @play %>
+    <p>
+      You throwed <strong><%= @play.sign1 %></strong>.
+      Computer throwed <strong><%= @play.sign2 %></strong>
+    </p>
+    <p class="<%= @play.result %>"><%= @play.result.upcase %></p>
+  <% end %>
+</div>
+

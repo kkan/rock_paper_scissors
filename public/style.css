@@ -1,0 +1,11 @@
+.win {
+  color: #00e600;
+}
+
+.loss {
+  color: #e60000;
+}
+
+.tie {
+  color: #0000e6;
+}
